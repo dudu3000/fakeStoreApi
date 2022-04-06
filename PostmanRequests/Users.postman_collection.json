@@ -1,0 +1,217 @@
+{
+	"info": {
+		"_postman_id": "b057e0d0-1e49-411c-813a-c9f78bb9bf27",
+		"name": "Users",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImR1ZHUzMDAwMSIsImVtYWlsIjoiZHVkdUB5YWhvby5jb20iLCJiaXJ0aERheSI6IjE5OTYtMDMtMDEiLCJpZCI6MiwiaWF0IjoxNjAwMTc3OTg5LCJleHAiOjE2MDAxNzgyODl9.pYLjnJ6SCp6slpnuAE3CYW-SAgiFGZL0ypedCVpCa8Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"mor_2314\",\r\n    \"password\": \"83r5^_\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"login"
+					]
+				},
+				"description": "username\r\npassword"
+			},
+			"response": []
+		},
+		{
+			"name": "Profile",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\": \"eyJr389hbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n                    \"email\":\"John@gmail.com\",\r\n                    \"username\":\"johnd\",\r\n                    \"password\":\"m38rmF$\",\r\n                    \"name\":{\r\n                        \"firstname\":\"John\",\r\n                        \"lastname\":\"Doe\"\r\n                    },\r\n                    \"address\":{\r\n                        \"city\":\"kilcoole\",\r\n                        \"street\":\"7835 new road\",\r\n                        \"number\":3,\r\n                        \"zipcode\":\"12926-3874\",\r\n                        \"geolocation\":{\r\n                            \"lat\":-37.3159,\r\n                            \"long\":81.1496\r\n                        }\r\n                    },\r\n                    \"phone\":\"1-570-236-7033\"\r\n                }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n                \"token\": \"eyJr389hbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9\",\r\n                \"email\":\"John@gmail.com\",\r\n                \"username\":\"johnd\",\r\n                \"password\":\"m38rmF$\",\r\n                \"name\":{\r\n                    \"firstname\":\"John\",\r\n                    \"lastname\":\"Doe\"\r\n                },\r\n                \"address\":{\r\n                    \"city\":\"kilcoole\",\r\n                    \"street\":\"7835 new road\",\r\n                    \"number\":3,\r\n                    \"zipcode\":\"12926-3874\",\r\n                    \"geolocation\":{\r\n                        \"lat\":\"-37.3159\",\r\n                        \"long\":\"81.1496\"\r\n                    }\r\n                },\r\n                \"phone\":\"1-570-236-7033\"\r\n                }\r\n                ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\": \"eyJr389hbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUsers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/all?limit=1&sort=desc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"all"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "sort",
+							"value": "desc"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
